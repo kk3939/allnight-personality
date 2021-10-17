@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import type { Browser, Page } from "puppeteer";
 
-export class AllnightPersonality {
+export default class AllnightPersonality {
   name: string[];
   constructor() {
     this.name = [];

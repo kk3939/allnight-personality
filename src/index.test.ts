@@ -1,4 +1,4 @@
-import { AllnightPersonality } from './index';
+import AllnightPersonality from './index';
 
 describe('allnight-personality test', () => {
 
@@ -8,7 +8,7 @@ describe('allnight-personality test', () => {
   };
 
   test('should be type:AllnightPersonality of its instance.', async () => {
-    const personality = await returnPersonality();
+    const personality: AllnightPersonality = await returnPersonality();
     expect(personality).toBeInstanceOf(AllnightPersonality);
   });
 
