@@ -1,16 +1,25 @@
 {
   "name": "allnight-personality",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "You can get allnight-personality's name with this pkg.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kk3939/allnight-personality"
+  },
+  "bugs": {
+    "url": "https://github.com/kk3939/allnight-personality/issues"
+  },
+  "homepage": "https://github.com/kk3939/allnight-personality/blob/main/README.md",
   "scripts": {
     "dev": "ts-node src/index.ts",
     "dev:watch": "ts-node-dev --respawn src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "kk3939 <kyo51310@gmail.com> (https://github.com/kk3939)",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",

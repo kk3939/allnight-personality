@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import type { Browser, Page } from "puppeteer";
 
-export class AllnightPersonality {
+export default class AllnightPersonality {
   name: string[];
   constructor() {
     this.name = [];
@@ -21,19 +21,21 @@ export class AllnightPersonality {
     const browser: Browser = await puppeteer.launch();
     const page: Page = await browser.newPage();
     try {
-      await page.goto(url)
+      await page.goto(url);
       const personalityArray: string[] = await page.evaluate(() => {
         const array: string[] = [];
         const personalityNodeList: NodeListOf<HTMLElement> = document.querySelectorAll("dd");
         personalityNodeList.forEach((elem: HTMLElement) => {
           if (!elem.textContent) {
-            array.push("can not get personality name.");
+            array.push("cannot get personality name.");
           } else {
             array.push(elem.textContent);
           }
         });
         return array;
       });
+      await page.close();
+      await browser.close();
       return personalityArray;
     } catch (e) {
       console.log(e);
