@@ -13,4 +13,4 @@ jobs:
       - name: yarn install
         run: yarn install
       - name: Run Jest
-        run: jest
+        run: npm run test
