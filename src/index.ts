@@ -17,7 +17,7 @@ export default class AllnightPersonality {
 
   // fetch personality names which is in "dd" of HTML emlement with puppeteer.
   private static async fetchPersonality() {
-    const url: string = "https://www.allnightnippon.com/personality.html";
+    const url = "https://www.allnightnippon.com/personality.html";
     const browser: Browser = await puppeteer.launch();
     const page: Page = await browser.newPage();
     try {
